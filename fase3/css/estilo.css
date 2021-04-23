@@ -29,10 +29,10 @@ section{
     background-color:gray;
 
 }
-aside{
+aside
     
     grid-column: 3/4;
-    background-color: rgb(206, 137, 238);
+    background-color:azure
 }
 footer{
     text-align: center;
@@ -50,4 +50,41 @@ desconocido {
 .contenedor{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.menu > li{
+    /*posicion: relstive;*/
+    display: inline-block;
+}
+.menu > li > a{
+    display: block;
+    padding: 15px 20px;
+    color:fuchsia;
+    font-family:'Open Sans';
+    text-decoration: none;
+}
+.menu li a:hover{
+    color:fuchsia;
+    transition: all .3s;
+}   
+/*submenu*/
+.submenu{
+    position: absolute;
+    background:fuchsia
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.submenu li a{
+    display: block;
+    padding: 15px;
+    color:fuchsia;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 1.5s;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
 }
